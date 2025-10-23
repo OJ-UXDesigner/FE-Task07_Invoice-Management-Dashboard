@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Management - FinanceFlow</title>
+
+
+    <!-- Google Material Symbols (Rounded style)  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="header">
+      <div class="header-content">
+        <!-- Logo & Brand  -->
+        <div class="brand">
+          <span class="brand-icon">▲</span>
+          <span class="brand-text">FinanceFlow</span>
+          <span class="badge-enterprise">Pro</span>
+        </div>
+
+        <!-- Right Menu  -->
+        <div class="header-right">
+          <button class="btn-header">
+            <span class="material-symbols-rounded">receipt_long</span>
+          </button>
+          <a href="#" class="header-link">Feedback</a>
+          <a href="#" class="header-link">Help</a>
+          <a href="#" class="header-link">Docs</a>
+          <div class="notification-icon">
+            <span class="material-symbols-rounded">notifications</span>
+            <span class="notification-badge">2</span>
+          </div>
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/80?img=68" alt="User Avatar" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs  -->
+    <nav class="nav-tabs">
+      <a href="#" class="nav-tab">Dashboard</a>
+      <a href="#" class="nav-tab active">Invoices</a>
+      <a href="#" class="nav-tab">Customers</a>
+      <a href="#" class="nav-tab">Reports</a>
+      <a href="#" class="nav-tab">Settings</a>
+    </nav>
+
+    <!-- Main Container  -->
+    <main class="container">
+      <!-- Stats Bar  -->
+      <div class="stats-bar">
+        <div class="stat-card">
+          <span class="stat-label">Total Revenue</span>
+          <span class="stat-value">$48,392</span>
+          <span class="stat-change positive">+12.5%</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Paid Invoices</span>
+          <span class="stat-value">24</span>
+          <span class="stat-change positive">+3</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Pending</span>
+          <span class="stat-value">8</span>
+          <span class="stat-change neutral">-</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Overdue</span>
+          <span class="stat-value">3</span>
+          <span class="stat-change negative">+1</span>
+        </div>
+      </div>
+
+      <!-- Page Header  -->
+      <div class="page-header">
+        <h1>Invoices</h1>
+        <div class="page-header-actions">
+          <div class="search-box">
+            <span class="material-symbols-rounded">search</span>
+            <input type="text" placeholder="Search invoices..." />
+          </div>
+          <button class="btn-primary">
+            <span class="material-symbols-rounded">add</span>
+            Create Invoice
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters Bar  -->
+      <div class="filters-bar">
+        <div class="filter-group">
+          <button class="filter-dropdown">
+            <div class="filter-icon-label">
+              <span class="material-symbols-rounded">filter_list</span>
+              <span class="filter-label">All Status</span>
+            </div>
+            <span class="material-symbols-rounded">expand_more</span>
+          </button>
+          <button class="filter-dropdown">
+            <div class="filter-icon-label">
+              <span class="material-symbols-rounded">calendar_today</span>
+              <span class="filter-label">Last 30 days</span>
+            </div>
+            <span class="material-symbols-rounded">expand_more</span>
+          </button>
+          <button class="filter-dropdown">
+            <div class="filter-icon-label">
+              <span class="material-symbols-rounded">person</span>
+              <span class="filter-label">All Customers</span>
+            </div>
+            <span class="material-symbols-rounded">expand_more</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Content Grid  -->
+      <div class="content-grid">
+        <!-- Invoice List  -->
+        <div class="invoice-list">
+          <!-- Invoice Item 1  -->
+          <div class="invoice-item active">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-1" />
+              <label for="invoice-1"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-047</span>
+                <span class="badge-status paid">Paid</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=25"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">Acme Corporation</span>
+                  <span class="customer-email">finance@acme.com</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Jan 15, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Feb 14, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$12,450.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 2  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-2" />
+              <label for="invoice-2"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-046</span>
+                <span class="badge-status overdue">Overdue</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=32"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">TechStart Inc.</span>
+                  <span class="customer-email">billing@techstart.io</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Dec 20, 2024</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Jan 19, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$8,750.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 3  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-3" />
+              <label for="invoice-3"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-045</span>
+                <span class="badge-status pending">Pending</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=45"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">Global Solutions Ltd</span>
+                  <span class="customer-email">accounts@globalsol.com</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Jan 10, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Feb 9, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$15,200.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 4  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-4" />
+              <label for="invoice-4"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-044</span>
+                <span class="badge-status paid">Paid</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=51"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">Innovate Digital</span>
+                  <span class="customer-email">payments@innovate.digital</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Jan 5, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Feb 4, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$6,890.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 5  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-5" />
+              <label for="invoice-5"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-043</span>
+                <span class="badge-status draft">Draft</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=60"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">CloudBase Systems</span>
+                  <span class="customer-email">finance@cloudbase.io</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">-</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">-</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$9,340.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 6  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-6" />
+              <label for="invoice-6"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-042</span>
+                <span class="badge-status pending">Pending</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=22"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">Nexus Enterprises</span>
+                  <span class="customer-email">ap@nexusent.com</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Jan 8, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Feb 7, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$11,680.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+
+          <!-- Invoice Item 7  -->
+          <div class="invoice-item">
+            <div class="invoice-checkbox">
+              <input type="checkbox" id="invoice-7" />
+              <label for="invoice-7"></label>
+            </div>
+            <div class="invoice-content">
+              <div class="invoice-header">
+                <span class="invoice-id">INV-2025-041</span>
+                <span class="badge-status overdue">Overdue</span>
+              </div>
+              <div class="invoice-customer">
+                <img
+                  src="https://i.pravatar.cc/40?img=38"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div class="customer-details">
+                  <span class="customer-name">Velocity Partners</span>
+                  <span class="customer-email">billing@velocity.co</span>
+                </div>
+              </div>
+              <div class="invoice-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Issued</span>
+                  <span class="meta-value">Dec 15, 2024</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Due</span>
+                  <span class="meta-value">Jan 14, 2025</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Amount</span>
+                  <span class="meta-value amount">$4,920.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="invoice-menu">
+              <span class="material-symbols-rounded">more_horiz</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Invoice Detail Panel  -->
+        <div class="invoice-panel">
+          <div class="invoice-panel-header">
+            <div class="invoice-title-section">
+              <h2>INV-2025-047</h2>
+              <span class="badge-status paid">Paid</span>
+            </div>
+            <div class="invoice-actions">
+              <button class="btn-icon" title="Download PDF">
+                <span class="material-symbols-rounded">download</span>
+              </button>
+              <button class="btn-icon" title="Send Email">
+                <span class="material-symbols-rounded">mail</span>
+              </button>
+              <button class="btn-icon" title="More">
+                <span class="material-symbols-rounded">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="invoice-info">
+            <div class="info-section">
+              <h3>Bill To</h3>
+              <div class="customer-info-detail">
+                <img
+                  src="https://i.pravatar.cc/60?img=25"
+                  alt="Customer"
+                  class="customer-avatar-lg"
+                />
+                <div class="customer-info-text">
+                  <div class="customer-name-email">
+                    <strong>Acme Corporation</strong>
+                    <p class="email">finance@acme.com</p>
+                  </div>
+                  <div class="customer-address">
+                    <p>123 Business Street<br />San Francisco, CA 94105</p>
+                    <span>United States</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-section">
+              <h3>Invoice Details</h3>
+              <div class="detail-grid">
+                <div class="detail-row">
+                  <span class="detail-label">Issue Date:</span>
+                  <span class="detail-value">January 15, 2025</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Due Date:</span>
+                  <span class="detail-value">February 14, 2025</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Payment Terms:</span>
+                  <span class="detail-value">Net 30</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Payment Method:</span>
+                  <span class="detail-value">Bank Transfer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="line-items">
+            <h3>Line Items</h3>
+            <table class="items-table">
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Qty</th>
+                  <th>Rate</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Web Development Services</strong>
+                    <p class="item-description">
+                      Custom website development and design
+                    </p>
+                  </td>
+                  <td>80 hrs</td>
+                  <td>$125.00</td>
+                  <td>$10,000.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>UI/UX Design</strong>
+                    <p class="item-description">
+                      User interface and experience design
+                    </p>
+                  </td>
+                  <td>15 hrs</td>
+                  <td>$150.00</td>
+                  <td>$2,250.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Hosting & Maintenance</strong>
+                    <p class="item-description">Monthly hosting and support</p>
+                  </td>
+                  <td>1</td>
+                  <td>$200.00</td>
+                  <td>$200.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="invoice-totals">
+            <div class="total-row">
+              <span class="total-label">Subtotal:</span>
+              <span class="total-value">$12,450.00</span>
+            </div>
+            <div class="total-row">
+              <span class="total-label">Tax (0%):</span>
+              <span class="total-value">$0.00</span>
+            </div>
+            <div class="total-row grand-total">
+              <span class="total-label">Total:</span>
+              <span class="total-value">$12,450.00</span>
+            </div>
+            <div class="total-row paid-amount">
+              <span class="total-label">Amount Paid:</span>
+              <span class="total-value">$12,450.00</span>
+            </div>
+            <div class="total-row balance-due">
+              <span class="total-label">Balance Due:</span>
+              <span class="total-value">$0.00</span>
+            </div>
+          </div>
+
+          <div class="invoice-panel-actions">
+            <button class="btn-secondary">
+              <span class="material-symbols-rounded">download</span>
+              Download PDF
+            </button>
+            <button class="btn-secondary">
+              <span class="material-symbols-rounded">mail</span>
+              Send to Customer
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
